@@ -56,14 +56,14 @@ namespace RecyclerViewSession
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int item_touch_helper_max_drag_scroll_per_frame = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2131034112;
 			
-			// aapt resource value: 0x7f040001
-			public const int item_touch_helper_swipe_escape_max_velocity = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131034113;
 			
-			// aapt resource value: 0x7f040002
-			public const int item_touch_helper_swipe_escape_velocity = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
 			
 			static Dimension()
 			{
@@ -75,20 +75,39 @@ namespace RecyclerViewSession
 			}
 		}
 		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int DividerItem = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int basicLayoutImage = 2131034113;
+			// aapt resource value: 0x7f060003
+			public const int activitySwitcher = 2131099651;
 			
-			// aapt resource value: 0x7f050002
-			public const int basicLayoutText = 2131034114;
+			// aapt resource value: 0x7f060001
+			public const int basicLayoutImage = 2131099649;
 			
-			// aapt resource value: 0x7f050003
-			public const int demoRecyclerView = 2131034115;
+			// aapt resource value: 0x7f060002
+			public const int basicLayoutText = 2131099650;
 			
-			// aapt resource value: 0x7f050000
-			public const int item_touch_helper_previous_elevation = 2131034112;
+			// aapt resource value: 0x7f060004
+			public const int demoRecyclerView = 2131099652;
+			
+			// aapt resource value: 0x7f060000
+			public const int item_touch_helper_previous_elevation = 2131099648;
 			
 			static Id()
 			{
@@ -103,11 +122,11 @@ namespace RecyclerViewSession
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int BasicLayout = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int BasicLayout = 2130968576;
 			
-			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int Main = 2130968577;
 			
 			static Layout()
 			{
@@ -122,8 +141,8 @@ namespace RecyclerViewSession
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			// aapt resource value: 0x7f030000
+			public const int Icon = 2130903040;
 			
 			static Mipmap()
 			{
@@ -138,11 +157,11 @@ namespace RecyclerViewSession
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int app_name = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int app_name = 2131165185;
 			
-			// aapt resource value: 0x7f060000
-			public const int hello = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int hello = 2131165184;
 			
 			static String()
 			{

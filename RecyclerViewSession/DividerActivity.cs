@@ -9,10 +9,11 @@ using Android.Content;
 
 namespace RecyclerViewSession
 {
-	[Activity(Label = "RecyclerViewSession", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
+	[Activity(Label="DividerActivity")]
+	public class DividerActivity : Activity
 	{
 		RecyclerView demoRecyclerView;
+		DividerItemDecorator decorator;
 		Button activitySwitcher;
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -22,12 +23,12 @@ namespace RecyclerViewSession
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			Title = "Basic Layout";
+			Title = "Divider RecyclerView";
 
 			demoRecyclerView = FindViewById<RecyclerView>(Resource.Id.demoRecyclerView);
 			activitySwitcher = FindViewById<Button>(Resource.Id.activitySwitcher);
-			activitySwitcher.Text = "Switch to Divider Demo";
-			activitySwitcher.Click += SwitchToDividerActivity;
+			activitySwitcher.Text = "Switch to Basic Demo";
+			activitySwitcher.Click += SwitchToMainActivity;
 		}
 
 		protected override async void OnResume()
@@ -41,6 +42,8 @@ namespace RecyclerViewSession
 				var adapter = new BasicAdapter();
 				adapter.Items = await service.RetrieveAllItems();
 				demoRecyclerView.SetAdapter(adapter);
+				decorator = new DividerItemDecorator(this);
+				demoRecyclerView.AddItemDecoration(decorator);
 				demoRecyclerView.SetLayoutManager(new LinearLayoutManager(this));
 			}
 			catch
@@ -48,9 +51,9 @@ namespace RecyclerViewSession
 			}
 		}
 
-		protected void SwitchToDividerActivity(object sender, EventArgs e)
+		protected void SwitchToMainActivity(object sender, EventArgs e)
 		{
-			var intent = new Intent(this, typeof(DividerActivity));
+			var intent = new Intent(this, typeof(MainActivity));
 			StartActivity(intent);
 		}
 
@@ -58,9 +61,20 @@ namespace RecyclerViewSession
 		{
 			base.OnDestroy();
 
+			if (decorator != null)
+			{
+				if (demoRecyclerView != null)
+				{
+					demoRecyclerView.RemoveItemDecoration(decorator);
+				}
+
+				decorator.Dispose();
+				decorator = null;
+			}
+
 			if (activitySwitcher != null)
 			{
-				activitySwitcher.Click -= SwitchToDividerActivity;
+				activitySwitcher.Click -= SwitchToMainActivity;
 				activitySwitcher.Dispose();
 				activitySwitcher = null;
 			}
