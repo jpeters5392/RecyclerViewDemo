@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="4dp"
-    android:paddingBottom="4dp">
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
     <ImageView
         android:id="@+id/basicLayoutImage"
         android:layout_width="wrap_content"
@@ -15,14 +15,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/basicLayoutImage"
-        android:layout_alignLeft="@+id/basicLayoutImage"
+        android:layout_alignLeft="@id/basicLayoutImage"
+        android:layout_alignRight="@id/basicLayoutImage"
         android:text="Switch" />
     <TextView
         android:id="@+id/basicLayoutText"
         android:textColor="@android:color/background_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/basicLayoutImage"
+        android:layout_alignBottom="@+id/basicLayoutImage"
         android:layout_alignRight="@+id/basicLayoutImage"
-        android:layout_alignBottom="@+id/basicLayoutImage" />
+        android:layout_alignLeft="@+id/basicLayoutImage" />
 </RelativeLayout>

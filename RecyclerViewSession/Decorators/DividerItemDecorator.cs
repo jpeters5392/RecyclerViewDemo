@@ -22,25 +22,70 @@ namespace RecyclerViewSession
 
 		public override void OnDrawOver(Canvas cValue, RecyclerView parent, RecyclerView.State state)
 		{
-			int left = parent.PaddingLeft;
-			int right = parent.Width - parent.PaddingRight;
-
 			int childCount = parent.ChildCount;
 
-			// if you want to add the divider to the last item then the modifier should be 0
-			int modifier = addDecoratorToLastItem ? 0 : 1;
-			for (int i = 0; i < childCount - modifier; i++)
+			var layoutManager = parent.GetLayoutManager() as LinearLayoutManager;
+			if (layoutManager != null && layoutManager.Orientation == LinearLayoutManager.Vertical)
 			{
-				View child = parent.GetChildAt(i);
+				int left = parent.PaddingLeft;
+				int right = parent.Width - parent.PaddingRight;
 
-				var layoutParams = (RecyclerView.LayoutParams)child.LayoutParameters;
+				// if you want to add the divider to the last item then the modifier should be 0
+				int modifier = 0;
+				if (!addDecoratorToLastItem && DetermineIfItemIsLastItem(layoutManager))
+				{
+					modifier = 1;
+				}
 
-				int top = child.Bottom + layoutParams.BottomMargin;
-				int bottom = top + divider.IntrinsicHeight;
+				for (int i = 0; i < childCount - modifier; i++)
+				{
+					View child = parent.GetChildAt(i);
 
-				divider.SetBounds(left, top, right, bottom);
-				divider.Draw(cValue);
+					var layoutParams = (RecyclerView.LayoutParams)child.LayoutParameters;
+
+					int top = child.Bottom + layoutParams.BottomMargin;
+					int bottom = top + divider.IntrinsicHeight;
+
+					divider.SetBounds(left, top, right, bottom);
+					divider.Draw(cValue);
+				}
 			}
+			else if (layoutManager != null && layoutManager.Orientation == LinearLayoutManager.Horizontal)
+			{
+				int top = parent.PaddingTop;
+				int bottom = parent.Height - parent.PaddingBottom;
+
+				// if you want to add the divider to the last item then the modifier should be 0
+				int modifier = 0;
+				if (!addDecoratorToLastItem && DetermineIfItemIsLastItem(layoutManager))
+				{
+					modifier = 1;
+				}
+
+				for (int i = 0; i < childCount - modifier; i++)
+				{
+					View child = parent.GetChildAt(i);
+
+					var layoutParams = (RecyclerView.LayoutParams)child.LayoutParameters;
+
+					int left = child.Right + layoutParams.RightMargin;
+					int right = left + divider.IntrinsicWidth;
+
+					divider.SetBounds(left, top, right, bottom);
+					divider.Draw(cValue);
+				}
+			}
+		}
+
+		bool DetermineIfItemIsLastItem(LinearLayoutManager layoutManager)
+		{
+			// check to see if the last visible item is the last item
+			if (layoutManager.FindLastVisibleItemPosition() == layoutManager.ItemCount - 1)
+			{
+				return true;
+			}
+
+			return false;
 		}
 
 		protected override void Dispose(bool disposing)

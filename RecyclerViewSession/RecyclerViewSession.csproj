@@ -95,6 +95,11 @@
     <Compile Include="Behaviors\ScrollAwareFabBehavior.cs" />
     <Compile Include="BasicGridActivity.cs" />
     <Compile Include="Adapters\BasicGridAdapter.cs" />
+    <Compile Include="ReversedGridActivity.cs" />
+    <Compile Include="HorizontalGridActivity.cs" />
+    <Compile Include="HorizontalListActivity.cs" />
+    <Compile Include="Adapters\HorizontalAdapter.cs" />
+    <Compile Include="HorizontalListWithDividersActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -116,6 +121,7 @@
     <AndroidResource Include="Resources\layout\FabLayout.axml" />
     <AndroidResource Include="Resources\values\style.xml" />
     <AndroidResource Include="Resources\layout\BasicGridLayout.axml" />
+    <AndroidResource Include="Resources\layout\HorizontalLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
