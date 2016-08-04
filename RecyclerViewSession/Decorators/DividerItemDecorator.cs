@@ -10,25 +10,26 @@ namespace RecyclerViewSession
 	public class DividerItemDecorator : RecyclerView.ItemDecoration
 	{
 		Drawable divider;
+		bool addDecoratorToLastItem = false;
 		public Context Context { get; set; }
 
-		public DividerItemDecorator()
-		{
-		}
-
-		public DividerItemDecorator(Context context)
+		public DividerItemDecorator(Context context, bool addDecoratorToLastItem)
 		{
 			Context = context;
 			divider = ContextCompat.GetDrawable(Context, Resource.Drawable.DividerItem);
+			this.addDecoratorToLastItem = addDecoratorToLastItem;
 		}
 
-		public override void OnDrawOver(Canvas canvas, RecyclerView parent, RecyclerView.State state)
+		public override void OnDrawOver(Canvas cValue, RecyclerView parent, RecyclerView.State state)
 		{
 			int left = parent.PaddingLeft;
 			int right = parent.Width - parent.PaddingRight;
 
 			int childCount = parent.ChildCount;
-			for (int i = 0; i < childCount; i++)
+
+			// if you want to add the divider to the last item then the modifier should be 0
+			int modifier = addDecoratorToLastItem ? 0 : 1;
+			for (int i = 0; i < childCount - modifier; i++)
 			{
 				View child = parent.GetChildAt(i);
 
@@ -38,7 +39,7 @@ namespace RecyclerViewSession
 				int bottom = top + divider.IntrinsicHeight;
 
 				divider.SetBounds(left, top, right, bottom);
-				divider.Draw(canvas);
+				divider.Draw(cValue);
 			}
 		}
 

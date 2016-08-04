@@ -1,66 +1,29 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
-using Android.Support.V7.Widget;
-using RecyclerViewSession.Adapters;
-using RecyclerViewSession.Services;
-using System;
-using Android.Content;
 
 namespace RecyclerViewSession
 {
 	[Activity(Label="DividerActivity")]
-	public class DividerActivity : Activity
+	public class DividerActivity : BaseActivity
 	{
-		RecyclerView demoRecyclerView;
 		DividerItemDecorator decorator;
-		Button activitySwitcher;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
-
 			Title = "Divider RecyclerView";
-
-			demoRecyclerView = FindViewById<RecyclerView>(Resource.Id.demoRecyclerView);
-			activitySwitcher = FindViewById<Button>(Resource.Id.activitySwitcher);
-			activitySwitcher.Text = "Switch to Basic Demo";
-			activitySwitcher.Click += SwitchToMainActivity;
 		}
 
-		protected override async void OnResume()
+		protected override void AssignDecorators()
 		{
-			// since this is async void make sure to catch any exceptions
-			try
-			{
-				base.OnResume();
-
-				var service = new DemoService();
-				var adapter = new BasicAdapter();
-				adapter.Items = await service.RetrieveAllItems();
-				demoRecyclerView.SetAdapter(adapter);
-				decorator = new DividerItemDecorator(this);
-				demoRecyclerView.AddItemDecoration(decorator);
-				demoRecyclerView.SetLayoutManager(new LinearLayoutManager(this));
-			}
-			catch
-			{
-			}
-		}
-
-		protected void SwitchToMainActivity(object sender, EventArgs e)
-		{
-			var intent = new Intent(this, typeof(MainActivity));
-			StartActivity(intent);
+			decorator = new DividerItemDecorator(this, false);
+			demoRecyclerView.AddItemDecoration(decorator);
 		}
 
 		protected override void OnDestroy()
 		{
-			base.OnDestroy();
-
+			// be sure to clean up the decorator
 			if (decorator != null)
 			{
 				if (demoRecyclerView != null)
@@ -72,18 +35,7 @@ namespace RecyclerViewSession
 				decorator = null;
 			}
 
-			if (activitySwitcher != null)
-			{
-				activitySwitcher.Click -= SwitchToMainActivity;
-				activitySwitcher.Dispose();
-				activitySwitcher = null;
-			}
-
-			if (demoRecyclerView != null)
-			{
-				demoRecyclerView.Dispose();
-				demoRecyclerView = null;
-			}
+			base.OnDestroy();
 		}
 	}
 }
