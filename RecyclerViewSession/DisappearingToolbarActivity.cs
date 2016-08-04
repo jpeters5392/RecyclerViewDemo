@@ -1,18 +1,14 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// All of the work to get the toolbar to collapse when you scroll is handled in the layout file
+	/// </summary>
 	[Activity(Label = "DisappearingToolbarActivity")]
 	public class DisappearingToolbarActivity : BaseActivity
 	{

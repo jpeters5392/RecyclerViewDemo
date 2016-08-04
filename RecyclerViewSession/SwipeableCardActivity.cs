@@ -11,6 +11,11 @@ using RecyclerViewSession.TouchHelpers;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// The important thing when dealing with swipe gestures is the ItemTouchHelper object.
+	/// That class determines what happens when you attempt to move or swipe an item, 
+	/// and it also determines when that item is considered fully "swiped"
+	/// </summary>
 	[Activity(Label = "SwipeableCardActivity")]
 	public class SwipeableCardActivity : BaseActivity
 	{
@@ -32,6 +37,8 @@ namespace RecyclerViewSession
 
 		protected override void AddTouchHelpers()
 		{
+			// you have to specify a callback for the helper to use
+			// and then you attach the helper to the recyclerview
 			var swipeHelper = new SwipeToDismissCallback();
 			itemTouchHelper = new ItemTouchHelper(swipeHelper);
 			itemTouchHelper.AttachToRecyclerView(demoRecyclerView);

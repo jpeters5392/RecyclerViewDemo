@@ -7,6 +7,9 @@ using Android.Views;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// An item decorator that draws a 1dp divider between the items
+	/// </summary>
 	public class DividerItemDecorator : RecyclerView.ItemDecoration
 	{
 		Drawable divider;
@@ -16,17 +19,32 @@ namespace RecyclerViewSession
 		public DividerItemDecorator(Context context, bool addDecoratorToLastItem)
 		{
 			Context = context;
+
+			// Grab a reference to the divider here.
+			// You can tint it or manipulate it if you want.
+			// NOTE: All references to a given drawable share the same instance, 
+			// so if you want to do something specific to this decorator then call Mutate() on it
+			// to get a unique instance
 			divider = ContextCompat.GetDrawable(Context, Resource.Drawable.DividerItem);
 			this.addDecoratorToLastItem = addDecoratorToLastItem;
 		}
 
+		/// <summary>
+		/// These are drawn on to the canvas AFTER the view, so they will appear on top of any content.
+		/// Use OnDraw(...) to draw underneath the content view
+		/// </summary>
+		/// <param name="cValue">C value.</param>
+		/// <param name="parent">Parent.</param>
+		/// <param name="state">State.</param>
 		public override void OnDrawOver(Canvas cValue, RecyclerView parent, RecyclerView.State state)
 		{
 			int childCount = parent.ChildCount;
 
+			// our decorator only cares about RecyclerViews that use a layout manager descending from the LinearLayoutManager
 			var layoutManager = parent.GetLayoutManager() as LinearLayoutManager;
 			if (layoutManager != null && layoutManager.Orientation == LinearLayoutManager.Vertical)
 			{
+				// draw the horizontal divider underneath the item
 				int left = parent.PaddingLeft;
 				int right = parent.Width - parent.PaddingRight;
 
@@ -52,6 +70,7 @@ namespace RecyclerViewSession
 			}
 			else if (layoutManager != null && layoutManager.Orientation == LinearLayoutManager.Horizontal)
 			{
+				// draw the vertical divider to the right of the item
 				int top = parent.PaddingTop;
 				int bottom = parent.Height - parent.PaddingBottom;
 
@@ -77,9 +96,14 @@ namespace RecyclerViewSession
 			}
 		}
 
+		/// <summary>
+		/// Determines if the last visible item is the absolute last item in the data set
+		/// </summary>
+		/// <returns><c>true</c>, if the last visible item is the absolute last item, <c>false</c> otherwise.</returns>
+		/// <param name="layoutManager">Layout manager.</param>
 		bool DetermineIfItemIsLastItem(LinearLayoutManager layoutManager)
 		{
-			// check to see if the last visible item is the last item
+			// check to see if the last visible item is the absolute last item
 			if (layoutManager.FindLastVisibleItemPosition() == layoutManager.ItemCount - 1)
 			{
 				return true;
@@ -92,6 +116,7 @@ namespace RecyclerViewSession
 		{
 			Context = null;
 
+			// be sure to clean up the drawable instance
 			if (divider != null)
 			{
 				divider.Dispose();

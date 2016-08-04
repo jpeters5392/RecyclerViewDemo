@@ -3,6 +3,11 @@ using Android.OS;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// The way that I am adding an item divider is by using an ItemDecorator.
+	/// Make sure to add the decorator to the RecyclerView, and then unregister it
+	/// when you are done with it.
+	/// </summary>
 	[Activity(Label="DividerActivity")]
 	public class DividerActivity : BaseActivity
 	{

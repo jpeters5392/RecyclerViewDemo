@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
@@ -12,6 +11,10 @@ using RecyclerViewSession.Services;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// This is a base class that populates the recycler view with data.
+	/// Using this allows the different activities to only do what is unique to that specific demo
+	/// </summary>
 	public class BaseActivity : AppCompatActivity
 	{
 		protected RecyclerView demoRecyclerView;
@@ -38,7 +41,7 @@ namespace RecyclerViewSession
 
 			toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
-			//Toolbar will now take on default actionbar characteristics
+			// set the support action toolbar to be the toolbar widget in our view
 			SetSupportActionBar(toolbar);
 
 			demoRecyclerView = FindViewById<RecyclerView>(Resource.Id.demoRecyclerView);
@@ -66,16 +69,17 @@ namespace RecyclerViewSession
 
 		protected virtual void AddTouchHelpers()
 		{
-			// the base version does not have touch helpers
+			// the basic version does not have touch helpers
 		}
 
 		protected virtual void AssignDecorators()
 		{
-			// the base version does not use decorators
+			// the basic version does not use decorators
 		}
 
 		protected virtual void AssignAdapter(IList<DemoModel> items)
 		{
+			// use a simple adapter for the basic version, but let subclasses override this
 			var adapter = new BasicAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
@@ -83,6 +87,7 @@ namespace RecyclerViewSession
 
 		protected virtual void AssignLayoutManager()
 		{
+			// use a linear layout by default, but make this overridable by subclasses
 			demoRecyclerView.SetLayoutManager(new LinearLayoutManager(this));
 		}
 

@@ -5,6 +5,9 @@ using RecyclerViewSession.Models;
 
 namespace RecyclerViewSession.Services
 {
+	/// <summary>
+	/// A dummy service to return data for the demo
+	/// </summary>
 	public class DemoService
 	{
 		static IList<DemoModel> items;

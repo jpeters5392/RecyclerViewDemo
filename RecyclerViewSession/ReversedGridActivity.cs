@@ -1,21 +1,19 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V7.Widget;
-using Android.Views;
-using Android.Widget;
 using RecyclerViewSession.Adapters;
 using RecyclerViewSession.Models;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// The only important thing here is that you pass "true" as the last parameter to the 
+	/// GridLayoutManager to reverse the order that it renders the items
+	/// </summary>
 	[Activity(Label = "ReversedGridActivity")]
 	public class ReversedGridActivity : BaseActivity
 	{

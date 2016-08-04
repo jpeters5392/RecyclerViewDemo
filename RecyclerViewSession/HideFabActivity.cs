@@ -1,19 +1,17 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.Design.Widget;
-using Android.Views;
 using Android.Widget;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// The logic to hide the FAB is handled in the behavior registed in the layout file.
+	/// A reference to the FAB is only needed here to handle click events.
+	/// </summary>
 	[Activity(Label = "HideFabActivity")]
 	public class HideFabActivity : BaseActivity
 	{

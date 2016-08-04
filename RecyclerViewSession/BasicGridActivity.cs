@@ -9,6 +9,9 @@ using RecyclerViewSession.Models;
 
 namespace RecyclerViewSession
 {
+	/// <summary>
+	/// Use the GridLayoutManager to create a grid from the RecyclerView
+	/// </summary>
 	[Activity(Label = "BasicGridActivity")]
 	public class BasicGridActivity : BaseActivity
 	{

@@ -8,7 +8,12 @@ using Android.Views;
 
 namespace RecyclerViewSession
 {
-	// we need to reference this behavior from XML so register this class
+	/// <summary>
+	/// This defines a behavior to be used with the CoordinatoryLayout where an item can be notified
+	/// if other sibling items are scrolled.  We use this to hide/show the FAB as needed.
+	/// </summary>
+	// we need to reference this behavior from XML so we have to register this class to create a static key
+	// otherwise you have to dig through your obj/ folder to find the Java wrapper package path for this class
 	[Android.Runtime.Register("com.ilmservice.behaviors.ScrollAwareFabBehavior")]
 	public class ScrollAwareFabBehavior : CoordinatorLayout.Behavior
 	{
@@ -18,6 +23,7 @@ namespace RecyclerViewSession
 
 		public override bool OnStartNestedScroll(CoordinatorLayout coordinatorLayout, Java.Lang.Object child, View directTargetChild, View target, int nestedScrollAxes)
 		{
+			// we are only interested in vertical scrolls
 			return nestedScrollAxes == ViewCompat.ScrollAxisVertical || base.OnStartNestedScroll(coordinatorLayout, child, directTargetChild, target, nestedScrollAxes);
 		}
 
@@ -27,6 +33,8 @@ namespace RecyclerViewSession
 
 			var button = (FloatingActionButton)child;
 			var recyclerView = target as RecyclerView;
+
+			// this is where you could apply your custom logic to determine when the button is displayed
 			if (recyclerView != null)
 			{
 				// if we are using a recyclerview with a linear layout manager then lets only show the button when the first element is fully visible
@@ -47,7 +55,7 @@ namespace RecyclerViewSession
 				}
 			}
 
-			// otherwise hide the button on down scrolls and show on up scrolls
+			// otherwise if we don't have a subclass of LinearLayoutManager then hide the button on down scrolls and show on up scrolls
 			if (dyConsumed > 0 && button.Visibility == ViewStates.Visible)
 			{
 				button.Hide();

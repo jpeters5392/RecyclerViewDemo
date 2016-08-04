@@ -6,6 +6,9 @@ using RecyclerViewSession.Events;
 
 namespace RecyclerViewSession.ViewHolders
 {
+	/// <summary>
+	/// A simple view holder that wraps some text, an image, and a button
+	/// </summary>
 	public class BasicViewHolder : RecyclerView.ViewHolder
 	{
 		public TextView BasicLayoutText { get; set; }
@@ -24,6 +27,7 @@ namespace RecyclerViewSession.ViewHolders
 
 		protected void OnClickSwitchToDemo(object sender, EventArgs e)
 		{
+			// bubble up the event if we have a subscriber
 			DemoChanged?.Invoke(this, new ViewHolderEventArgs(AdapterPosition));
 		}
 
