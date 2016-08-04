@@ -46,16 +46,16 @@ namespace RecyclerViewSession.Services
 			items = new List<DemoModel>();
 			PopulateModel("Basic List", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(MainActivity));
 			PopulateModel("Horizontal List", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(HorizontalListActivity));
-			PopulateModel("Horizontal List with Dividers", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(HorizontalListWithDividersActivity));
 			PopulateModel("Basic List with Dividers", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/dan-edgar-116.png", typeof(DividerActivity));
+			PopulateModel("Horizontal List with Dividers", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(HorizontalListWithDividersActivity));
 			PopulateModel("List of Cards", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/brian-maula-100.png", typeof(BasicCardActivity));
 			PopulateModel("List of Swipeable Cards", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/brett-hazen-106.png", typeof(SwipeableCardActivity));
-			PopulateModel("Hide FAB", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/jason-erdahl-289.jpg", typeof(HideFabActivity));
-			PopulateModel("Resizing Toolbar", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(MainActivity));
 			PopulateModel("Basic Grid", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(BasicGridActivity));
-			PopulateModel("Scroll Indexing", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(BasicGridActivity));
 			PopulateModel("Reversed Grid", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(ReversedGridActivity));
 			PopulateModel("Horizontal Grid", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(HorizontalGridActivity));
+			PopulateModel("Hide FAB", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/jason-erdahl-289.jpg", typeof(HideFabActivity));
+			PopulateModel("Disappearing Toolbar", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(DisappearingToolbarActivity));
+			PopulateModel("Resizing Toolbar", "https://ilmwebsitestorage.blob.core.windows.net/profile-images/joel-peterson-112.png", typeof(ResizeToolbarActivity));
 		}
 	}
 }

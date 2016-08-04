@@ -1863,8 +1863,11 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f02004d
 			public const int DividerItem = 2130837581;
 			
+			// aapt resource value: 0x7f02004f
+			public const int notification_template_icon_bg = 2130837583;
+			
 			// aapt resource value: 0x7f02004e
-			public const int notification_template_icon_bg = 2130837582;
+			public const int trainTracks = 2130837582;
 			
 			static Drawable()
 			{
@@ -1993,8 +1996,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0040
 			public const int default_activity_button = 2131361856;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int demoRecyclerView = 2131361911;
+			// aapt resource value: 0x7f0a0076
+			public const int demoRecyclerView = 2131361910;
 			
 			// aapt resource value: 0x7f0a006e
 			public const int design_bottom_sheet = 2131361902;
@@ -2254,8 +2257,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0048
 			public const int title_template = 2131361864;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int toolbar = 2131361910;
+			// aapt resource value: 0x7f0a0077
+			public const int toolbar = 2131361911;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int top = 2131361820;
@@ -2449,49 +2452,55 @@ namespace RecyclerViewSession
 			public const int design_navigation_menu_item = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int FabLayout = 2130968616;
+			public const int DisappearingToolbarLayout = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int HorizontalLayout = 2130968617;
+			public const int FabLayout = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int Main = 2130968618;
+			public const int HorizontalLayout = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_media_action = 2130968619;
+			public const int Main = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_media_cancel_action = 2130968620;
+			public const int notification_media_action = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_template_big_media = 2130968621;
+			public const int notification_media_cancel_action = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_template_big_media_narrow = 2130968622;
+			public const int notification_template_big_media = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_lines = 2130968623;
+			public const int notification_template_big_media_narrow = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_media = 2130968624;
+			public const int notification_template_lines = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_part_chronometer = 2130968625;
+			public const int notification_template_media = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_part_time = 2130968626;
+			public const int notification_template_part_chronometer = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int select_dialog_item_material = 2130968627;
+			public const int notification_template_part_time = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int select_dialog_multichoice_material = 2130968628;
+			public const int ResizeToolbarLayout = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int select_dialog_singlechoice_material = 2130968629;
+			public const int select_dialog_item_material = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int support_simple_spinner_dropdown_item = 2130968630;
+			public const int select_dialog_multichoice_material = 2130968630;
+			
+			// aapt resource value: 0x7f040037
+			public const int select_dialog_singlechoice_material = 2130968631;
+			
+			// aapt resource value: 0x7f040038
+			public const int support_simple_spinner_dropdown_item = 2130968632;
 			
 			static Layout()
 			{
