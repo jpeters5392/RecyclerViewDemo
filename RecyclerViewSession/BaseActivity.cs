@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Widget;
+using Newtonsoft.Json;
 using RecyclerViewSession.Adapters;
 using RecyclerViewSession.Models;
 using RecyclerViewSession.Services;
@@ -17,9 +18,13 @@ namespace RecyclerViewSession
 	/// </summary>
 	public class BaseActivity : AppCompatActivity
 	{
+		protected IList<DemoModel> items;
+		protected const string ItemsCacheKey = "itemsCache";
+
 		protected RecyclerView demoRecyclerView;
 		protected DemoService service;
 		protected Android.Support.V7.Widget.Toolbar toolbar;
+		protected BasicAdapter adapter;
 
 		protected virtual int LayoutId
 		{
@@ -45,6 +50,24 @@ namespace RecyclerViewSession
 			SetSupportActionBar(toolbar);
 
 			demoRecyclerView = FindViewById<RecyclerView>(Resource.Id.demoRecyclerView);
+
+			// if there is saved state, then restore it here so that scrolling position can be retained
+			if (savedInstanceState != null)
+			{
+				var cachedItems = savedInstanceState.GetString(ItemsCacheKey, null);
+				if (cachedItems != null)
+				{
+					items = JsonConvert.DeserializeObject<IList<DemoModel>>(cachedItems);
+					BuildRecyclerView(items);
+				}
+			}
+		}
+
+		protected override void OnSaveInstanceState(Bundle outState)
+		{
+			base.OnSaveInstanceState(outState);
+
+			outState.PutString(ItemsCacheKey, JsonConvert.SerializeObject(items));
 		}
 
 		protected override async void OnResume()
@@ -54,17 +77,24 @@ namespace RecyclerViewSession
 			{
 				base.OnResume();
 
-
-				var items = await service.RetrieveAllItems();
-				AssignAdapter(items);
-				AssignDecorators();
-				AddTouchHelpers();
-				AssignLayoutManager();
+				if (items == null)
+				{
+					items = await service.RetrieveAllItems();
+					BuildRecyclerView(items);
+				}
 			}
 			catch(Exception ex)
 			{
 				Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
 			}
+		}
+
+		protected virtual void BuildRecyclerView(IList<DemoModel> items)
+		{
+			AssignAdapter(items);
+			AssignDecorators();
+			AddTouchHelpers();
+			AssignLayoutManager();
 		}
 
 		protected virtual void AddTouchHelpers()
@@ -80,7 +110,7 @@ namespace RecyclerViewSession
 		protected virtual void AssignAdapter(IList<DemoModel> items)
 		{
 			// use a simple adapter for the basic version, but let subclasses override this
-			var adapter = new BasicAdapter();
+			adapter = new BasicAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
 		}
@@ -101,6 +131,12 @@ namespace RecyclerViewSession
 			{
 				demoRecyclerView.Dispose();
 				demoRecyclerView = null;
+			}
+
+			if (adapter != null)
+			{
+				adapter.Dispose();
+				adapter = null;
 			}
 
 			if (toolbar != null)

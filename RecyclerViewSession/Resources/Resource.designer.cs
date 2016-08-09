@@ -1882,8 +1882,8 @@ namespace RecyclerViewSession
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0079
-			public const int action0 = 2131361913;
+			// aapt resource value: 0x7f0a007b
+			public const int action0 = 2131361915;
 			
 			// aapt resource value: 0x7f0a005a
 			public const int action_bar = 2131361882;
@@ -1909,8 +1909,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a005b
 			public const int action_context_bar = 2131361883;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int action_divider = 2131361917;
+			// aapt resource value: 0x7f0a007f
+			public const int action_divider = 2131361919;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -1936,6 +1936,9 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0035
 			public const int always = 2131361845;
 			
+			// aapt resource value: 0x7f0a0088
+			public const int appBarLayout = 2131361928;
+			
 			// aapt resource value: 0x7f0a0069
 			public const int basicCard = 2131361897;
 			
@@ -1954,8 +1957,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0044
 			public const int buttonPanel = 2131361860;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int cancel_action = 2131361914;
+			// aapt resource value: 0x7f0a007c
+			public const int cancel_action = 2131361916;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int center = 2131361812;
@@ -1969,8 +1972,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0052
 			public const int checkbox = 2131361874;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int chronometer = 2131361920;
+			// aapt resource value: 0x7f0a0082
+			public const int chronometer = 2131361922;
 			
 			// aapt resource value: 0x7f0a001d
 			public const int clip_horizontal = 2131361821;
@@ -1980,6 +1983,9 @@ namespace RecyclerViewSession
 			
 			// aapt resource value: 0x7f0a0036
 			public const int collapseActionView = 2131361846;
+			
+			// aapt resource value: 0x7f0a0089
+			public const int collapsingToolbarLayout = 2131361929;
 			
 			// aapt resource value: 0x7f0a004a
 			public const int contentPanel = 2131361866;
@@ -1996,8 +2002,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0040
 			public const int default_activity_button = 2131361856;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int demoRecyclerView = 2131361910;
+			// aapt resource value: 0x7f0a0077
+			public const int demoRecyclerView = 2131361911;
 			
 			// aapt resource value: 0x7f0a006e
 			public const int design_bottom_sheet = 2131361902;
@@ -2017,14 +2023,17 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0027
 			public const int disableHome = 2131361831;
 			
+			// aapt resource value: 0x7f0a0078
+			public const int disappearingToolbarLayout = 2131361912;
+			
 			// aapt resource value: 0x7f0a005c
 			public const int edit_query = 2131361884;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int end = 2131361815;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int end_padder = 2131361925;
+			// aapt resource value: 0x7f0a0087
+			public const int end_padder = 2131361927;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int enterAlways = 2131361803;
@@ -2041,8 +2050,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0051
 			public const int expanded_menu = 2131361873;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int fab = 2131361912;
+			// aapt resource value: 0x7f0a007a
+			public const int fab = 2131361914;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int fill = 2131361823;
@@ -2071,8 +2080,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a003f
 			public const int image = 2131361855;
 			
-			// aapt resource value: 0x7f0a0084
-			public const int info = 2131361924;
+			// aapt resource value: 0x7f0a0086
+			public const int info = 2131361926;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int item_touch_helper_previous_elevation = 2131361802;
@@ -2080,11 +2089,11 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0019
 			public const int left = 2131361817;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int line1 = 2131361918;
+			// aapt resource value: 0x7f0a0080
+			public const int line1 = 2131361920;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int line3 = 2131361922;
+			// aapt resource value: 0x7f0a0084
+			public const int line3 = 2131361924;
 			
 			// aapt resource value: 0x7f0a0025
 			public const int listMode = 2131361829;
@@ -2092,8 +2101,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0041
 			public const int list_item = 2131361857;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int media_actions = 2131361916;
+			// aapt resource value: 0x7f0a007e
+			public const int media_actions = 2131361918;
 			
 			// aapt resource value: 0x7f0a0034
 			public const int middle = 2131361844;
@@ -2136,6 +2145,9 @@ namespace RecyclerViewSession
 			
 			// aapt resource value: 0x7f0a001a
 			public const int right = 2131361818;
+			
+			// aapt resource value: 0x7f0a0076
+			public const int rootLayout = 2131361910;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int screen = 2131361839;
@@ -2227,8 +2239,8 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a001b
 			public const int start = 2131361819;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int status_bar_latest_event_content = 2131361915;
+			// aapt resource value: 0x7f0a007d
+			public const int status_bar_latest_event_content = 2131361917;
 			
 			// aapt resource value: 0x7f0a0065
 			public const int submit_area = 2131361893;
@@ -2239,17 +2251,17 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0026
 			public const int tabMode = 2131361830;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int text = 2131361923;
+			// aapt resource value: 0x7f0a0085
+			public const int text = 2131361925;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int text2 = 2131361921;
+			// aapt resource value: 0x7f0a0083
+			public const int text2 = 2131361923;
 			
 			// aapt resource value: 0x7f0a004d
 			public const int textSpacerNoButtons = 2131361869;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int time = 2131361919;
+			// aapt resource value: 0x7f0a0081
+			public const int time = 2131361921;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int title = 2131361859;
@@ -2257,8 +2269,11 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f0a0048
 			public const int title_template = 2131361864;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int toolbar = 2131361911;
+			// aapt resource value: 0x7f0a0079
+			public const int toolbar = 2131361913;
+			
+			// aapt resource value: 0x7f0a008a
+			public const int toolbarImage = 2131361930;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int top = 2131361820;
