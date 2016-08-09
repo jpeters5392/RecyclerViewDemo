@@ -105,6 +105,7 @@
     <Compile Include="HorizontalListWithDividersActivity.cs" />
     <Compile Include="ResizeToolbarActivity.cs" />
     <Compile Include="DisappearingToolbarActivity.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -130,6 +131,9 @@
     <AndroidResource Include="Resources\layout\DisappearingToolbarLayout.axml" />
     <AndroidResource Include="Resources\layout\ResizeToolbarLayout.axml" />
     <AndroidResource Include="Resources\drawable\trainTracks.jpg" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable\splash.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

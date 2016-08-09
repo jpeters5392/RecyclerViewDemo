@@ -5,7 +5,7 @@ using Android.Views;
 namespace RecyclerViewSession
 {
 	// You don't have to do anything special for a basic list
-	[Activity(Label = "RecyclerViewSession", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "RecyclerViewSession", MainLauncher = false)]
 	public class MainActivity : BaseActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

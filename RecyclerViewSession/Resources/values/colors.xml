@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!--Get colors from: http://www.materialpalette.com/-->
+	<color name="splashPrimary">#5f7994</color>
+	<color name="splashPrimaryDark">#1f4366</color>
+	<color name="splashAccent">#F0720C</color>
+</resources>
+

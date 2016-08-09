@@ -1021,32 +1021,32 @@ namespace RecyclerViewSession
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090048
-			public const int abc_background_cache_hint_selector_material_dark = 2131296328;
+			// aapt resource value: 0x7f09004b
+			public const int abc_background_cache_hint_selector_material_dark = 2131296331;
 			
-			// aapt resource value: 0x7f090049
-			public const int abc_background_cache_hint_selector_material_light = 2131296329;
+			// aapt resource value: 0x7f09004c
+			public const int abc_background_cache_hint_selector_material_light = 2131296332;
 			
-			// aapt resource value: 0x7f09004a
-			public const int abc_color_highlight_material = 2131296330;
+			// aapt resource value: 0x7f09004d
+			public const int abc_color_highlight_material = 2131296333;
 			
 			// aapt resource value: 0x7f09000a
 			public const int abc_input_method_navigation_guard = 2131296266;
 			
-			// aapt resource value: 0x7f09004b
-			public const int abc_primary_text_disable_only_material_dark = 2131296331;
-			
-			// aapt resource value: 0x7f09004c
-			public const int abc_primary_text_disable_only_material_light = 2131296332;
-			
-			// aapt resource value: 0x7f09004d
-			public const int abc_primary_text_material_dark = 2131296333;
-			
 			// aapt resource value: 0x7f09004e
-			public const int abc_primary_text_material_light = 2131296334;
+			public const int abc_primary_text_disable_only_material_dark = 2131296334;
 			
 			// aapt resource value: 0x7f09004f
-			public const int abc_search_url_text = 2131296335;
+			public const int abc_primary_text_disable_only_material_light = 2131296335;
+			
+			// aapt resource value: 0x7f090050
+			public const int abc_primary_text_material_dark = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int abc_primary_text_material_light = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int abc_search_url_text = 2131296338;
 			
 			// aapt resource value: 0x7f09000b
 			public const int abc_search_url_text_normal = 2131296267;
@@ -1057,11 +1057,11 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f09000d
 			public const int abc_search_url_text_selected = 2131296269;
 			
-			// aapt resource value: 0x7f090050
-			public const int abc_secondary_text_material_dark = 2131296336;
+			// aapt resource value: 0x7f090053
+			public const int abc_secondary_text_material_dark = 2131296339;
 			
-			// aapt resource value: 0x7f090051
-			public const int abc_secondary_text_material_light = 2131296337;
+			// aapt resource value: 0x7f090054
+			public const int abc_secondary_text_material_light = 2131296340;
 			
 			// aapt resource value: 0x7f09000e
 			public const int accent_material_dark = 2131296270;
@@ -1255,17 +1255,26 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f09003f
 			public const int secondary_text_disabled_material_light = 2131296319;
 			
+			// aapt resource value: 0x7f09004a
+			public const int splashAccent = 2131296330;
+			
+			// aapt resource value: 0x7f090048
+			public const int splashPrimary = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int splashPrimaryDark = 2131296329;
+			
 			// aapt resource value: 0x7f090040
 			public const int switch_thumb_disabled_material_dark = 2131296320;
 			
 			// aapt resource value: 0x7f090041
 			public const int switch_thumb_disabled_material_light = 2131296321;
 			
-			// aapt resource value: 0x7f090052
-			public const int switch_thumb_material_dark = 2131296338;
+			// aapt resource value: 0x7f090055
+			public const int switch_thumb_material_dark = 2131296341;
 			
-			// aapt resource value: 0x7f090053
-			public const int switch_thumb_material_light = 2131296339;
+			// aapt resource value: 0x7f090056
+			public const int switch_thumb_material_light = 2131296342;
 			
 			// aapt resource value: 0x7f090042
 			public const int switch_thumb_normal_material_dark = 2131296322;
@@ -1863,11 +1872,17 @@ namespace RecyclerViewSession
 			// aapt resource value: 0x7f02004d
 			public const int DividerItem = 2130837581;
 			
-			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
-			
 			// aapt resource value: 0x7f02004e
-			public const int trainTracks = 2130837582;
+			public const int logo = 2130837582;
+			
+			// aapt resource value: 0x7f020051
+			public const int notification_template_icon_bg = 2130837585;
+			
+			// aapt resource value: 0x7f02004f
+			public const int splash = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int trainTracks = 2130837584;
 			
 			static Drawable()
 			{
@@ -3167,6 +3182,12 @@ namespace RecyclerViewSession
 			
 			// aapt resource value: 0x7f06004e
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131099726;
+			
+			// aapt resource value: 0x7f06015d
+			public const int SplashTheme = 2131099997;
+			
+			// aapt resource value: 0x7f06015e
+			public const int SplashTheme_Base = 2131099998;
 			
 			// aapt resource value: 0x7f0600cf
 			public const int TextAppearance_AppCompat = 2131099855;
