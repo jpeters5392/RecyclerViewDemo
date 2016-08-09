@@ -4,5 +4,7 @@
 	<color name="splashPrimary">#5f7994</color>
 	<color name="splashPrimaryDark">#1f4366</color>
 	<color name="splashAccent">#F0720C</color>
+	<color name="white">#FFFFFF</color>
+	<color name="dividerColor">#7D000000</color>
 </resources>
 

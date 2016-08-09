@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Android.Widget;
 using RecyclerViewSession.Events;
 using RecyclerViewSession.ViewHolders;
 
@@ -18,6 +19,7 @@ namespace RecyclerViewSession.Adapters
 			Items.RemoveAt(e.AdapterPosition);
 			// notify the adapter to update the RecyclerView UI
 			NotifyItemRemoved(e.AdapterPosition);
+			Toast.MakeText(recyclerView.Context, "Item dismissed", ToastLength.Short).Show();
 		}
 
 		/// <summary>

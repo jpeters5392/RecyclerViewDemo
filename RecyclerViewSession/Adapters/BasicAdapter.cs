@@ -17,7 +17,7 @@ namespace RecyclerViewSession.Adapters
 	public class BasicAdapter : RecyclerView.Adapter
 	{
 		IList<DemoModel> items;
-		RecyclerView recyclerView;
+		protected RecyclerView recyclerView;
 
 		public IList<DemoModel> Items
 		{

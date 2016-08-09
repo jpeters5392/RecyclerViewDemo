@@ -27,7 +27,7 @@ namespace RecyclerViewSession
 
 		protected override void AssignAdapter(IList<Models.DemoModel> items)
 		{
-			var adapter = new HorizontalAdapter();
+			adapter = new HorizontalAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
 		}

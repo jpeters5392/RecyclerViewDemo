@@ -25,7 +25,7 @@ namespace RecyclerViewSession
 
 		protected override void AssignAdapter(IList<DemoModel> items)
 		{
-			var adapter = new CardAdapter();
+			adapter = new CardAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
 		}

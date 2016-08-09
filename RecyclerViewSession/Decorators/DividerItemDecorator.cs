@@ -2,6 +2,7 @@
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Support.V4.Content;
+using Android.Support.V4.Graphics.Drawable;
 using Android.Support.V7.Widget;
 using Android.Views;
 
@@ -26,6 +27,10 @@ namespace RecyclerViewSession
 			// so if you want to do something specific to this decorator then call Mutate() on it
 			// to get a unique instance
 			divider = ContextCompat.GetDrawable(Context, Resource.Drawable.DividerItem);
+			divider = DrawableCompat.Wrap(divider);
+			DrawableCompat.SetTint(divider, ContextCompat.GetColor(Context, Resource.Color.dividerColor));
+			DrawableCompat.SetTintMode(divider, PorterDuff.Mode.SrcIn);
+			divider.Alpha = 125;
 			this.addDecoratorToLastItem = addDecoratorToLastItem;
 		}
 

@@ -26,7 +26,7 @@ namespace RecyclerViewSession
 
 		protected override void AssignAdapter(IList<DemoModel> items)
 		{
-			var adapter = new BasicGridAdapter();
+			adapter = new BasicGridAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
 		}

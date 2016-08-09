@@ -30,7 +30,7 @@ namespace RecyclerViewSession
 
 		protected override void AssignAdapter(IList<DemoModel> items)
 		{
-			var adapter = new SwipeableCardAdapter();
+			adapter = new SwipeableCardAdapter();
 			adapter.Items = items;
 			demoRecyclerView.SetAdapter(adapter);
 		}
