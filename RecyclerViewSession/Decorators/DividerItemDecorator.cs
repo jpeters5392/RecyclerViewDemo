@@ -22,12 +22,14 @@ namespace RecyclerViewSession
 			Context = context;
 
 			// Grab a reference to the divider here.
+			// Use DrawableCompat.Wrap to wrap the drawable with the compat library
+			// This gives us access to more advanced features like tinting
+			divider = DrawableCompat.Wrap(ContextCompat.GetDrawable(Context, Resource.Drawable.DividerItem));
+
 			// You can tint it or manipulate it if you want.
 			// NOTE: All references to a given drawable share the same instance, 
 			// so if you want to do something specific to this decorator then call Mutate() on it
 			// to get a unique instance
-			divider = ContextCompat.GetDrawable(Context, Resource.Drawable.DividerItem);
-			divider = DrawableCompat.Wrap(divider);
 			DrawableCompat.SetTint(divider, ContextCompat.GetColor(Context, Resource.Color.dividerColor));
 			DrawableCompat.SetTintMode(divider, PorterDuff.Mode.SrcIn);
 			divider.Alpha = 125;
