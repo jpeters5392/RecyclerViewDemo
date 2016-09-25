@@ -8,8 +8,8 @@
     android:paddingBottom="4dp">
     <ImageView
         android:id="@+id/basicLayoutImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
     <Button
         android:id="@+id/switchToDemo"
         android:layout_width="wrap_content"

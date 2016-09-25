@@ -116,7 +116,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\layout\BasicLayout.axml" />
     <AndroidResource Include="Resources\drawable\DividerItem.axml" />
     <AndroidResource Include="Resources\layout\BasicCardLayout.axml" />
     <AndroidResource Include="Resources\layout\FabLayout.axml" />
@@ -129,6 +128,7 @@
     <AndroidResource Include="Resources\drawable\logo.png" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\drawable\splash.axml" />
+    <AndroidResource Include="Resources\layout\BasicLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
